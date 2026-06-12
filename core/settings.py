@@ -125,7 +125,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static/",
 ]
-STATIC_ROOT = '/home/joseclecioportfolio/portfolio_deploy/static'
+STATIC_ROOT = '/home/joseclecioportfolio/portfolio_deploy/staticfiles/'
 
 # ENVIO DE EMAIL
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

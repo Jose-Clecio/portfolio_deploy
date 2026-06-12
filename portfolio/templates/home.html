@@ -1,0 +1,32 @@
+    {% extends 'base.html' %}
+
+    {% block title %}
+        Home | Meu Portfólio
+    {% endblock %}
+    {% block content %}
+        <section>
+            <h1>Sobre mim</h1>
+            <p>Olá, Meu nome é Clécio, sou desenvolvedor e laboatorista na Vilasa.</p>
+        </section>
+        <section>
+            <h2>Habilidades</h2>
+            <ul>
+                {% for habilidade in habilidades %}
+                    <li>{{habilidade.nome}}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% if messages %}
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+        {% endif %}
+        <section>
+            <h2>Contatos</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    {% endblock %}

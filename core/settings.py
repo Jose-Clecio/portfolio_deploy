@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-hjwxfl+4qebp7=+gz26q5&0q9r!=ptx7uwqt%zy#b0mfi2#xo&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'joseclecioportfolio.pythonanywhere.com',
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -121,6 +125,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static/",
 ]
+STATIC_ROOT = '/home/joseclecioportfolio/portfolio_deploy/static'
 
 # ENVIO DE EMAIL
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
